@@ -1,0 +1,6 @@
+apiVersion: wavefrontproxy.wavefront.com/v1alpha1
+kind: WavefrontProxy
+metadata:
+  name: wavefrontproxy-sample
+spec:
+  # Add fields here

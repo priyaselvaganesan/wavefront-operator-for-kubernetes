@@ -1,0 +1,60 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - wavefrontcollector.wavefront.com
+  resources:
+  - wavefrontcollectors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - wavefrontcollector.wavefront.com
+  resources:
+  - wavefrontcollectors/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - wavefrontcollector.wavefront.com
+  resources:
+  - wavefrontcollectors/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - wavefrontproxy.wavefront.com
+  resources:
+  - wavefrontproxies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - wavefrontproxy.wavefront.com
+  resources:
+  - wavefrontproxies/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - wavefrontproxy.wavefront.com
+  resources:
+  - wavefrontproxies/status
+  verbs:
+  - get
+  - patch
+  - update

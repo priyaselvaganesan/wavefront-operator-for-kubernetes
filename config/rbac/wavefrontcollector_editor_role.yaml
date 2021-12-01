@@ -1,0 +1,24 @@
+# permissions for end users to edit wavefrontcollectors.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: wavefrontcollector-editor-role
+rules:
+- apiGroups:
+  - wavefrontcollector.wavefront.com
+  resources:
+  - wavefrontcollectors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - wavefrontcollector.wavefront.com
+  resources:
+  - wavefrontcollectors/status
+  verbs:
+  - get

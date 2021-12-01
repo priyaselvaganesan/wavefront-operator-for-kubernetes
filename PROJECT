@@ -1,0 +1,29 @@
+domain: wavefront.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: wavefront-operator-for-kubernetes
+repo: github.com/wavefronthq/wavefront-operator-for-kubernetes
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wavefront.com
+  group: wavefrontcollector
+  kind: WavefrontCollector
+  path: github.com/wavefronthq/wavefront-operator-for-kubernetes/apis/wavefrontcollector/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wavefront.com
+  group: wavefrontproxy
+  kind: WavefrontProxy
+  path: github.com/wavefronthq/wavefront-operator-for-kubernetes/apis/wavefrontproxy/v1alpha1
+  version: v1alpha1
+version: "3"

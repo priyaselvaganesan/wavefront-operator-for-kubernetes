@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- wavefrontcollector_v1alpha1_wavefrontcollector.yaml
+- wavefrontproxy_v1alpha1_wavefrontproxy.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

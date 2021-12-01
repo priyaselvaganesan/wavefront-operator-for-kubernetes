@@ -1,0 +1,6 @@
+apiVersion: wavefrontcollector.wavefront.com/v1alpha1
+kind: WavefrontCollector
+metadata:
+  name: wavefrontcollector-sample
+spec:
+  # Add fields here
